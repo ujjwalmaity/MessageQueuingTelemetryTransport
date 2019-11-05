@@ -1,13 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center">
 
-    <Button
-        android:id="@+id/mqtt"
+    <LinearLayout
+        android:id="@+id/linear_layout_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="CONNECT" />
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONNECT"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="DISCONNECT"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_1"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBSCRIBE"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/unsubscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="UNSUBSCRIBE"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout_2"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/payload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type payload"
+            android:maxLines="3"
+            android:textColor="@color/blue" />
+
+        <Button
+            android:id="@+id/publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:text="PUBLISH"
+            android:textColor="@color/blue" />
+    </LinearLayout>
 
 </RelativeLayout>
